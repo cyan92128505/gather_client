@@ -1,0 +1,15 @@
+{
+  "name": "gather_client",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "@gathertown/gather-game-client": "^43.0.1"
+  }
+}
