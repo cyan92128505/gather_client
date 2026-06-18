@@ -1,0 +1,12 @@
+services:
+  gather-wave-notifier:
+    build: .
+    container_name: gather-wave-notifier
+    env_file: .env
+    restart: unless-stopped
+    init: true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
