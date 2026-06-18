@@ -1,2 +1,5 @@
 API_KEY=[Api Key]
 SPACE_ID=[Space ID(16 bit)]/[Space Name]
+TG_BOT_TOKEN=
+TG_CHAT_ID=
+OWNER_NAME=
