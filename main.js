@@ -25,7 +25,7 @@ function main() {
   game.subscribeToEvent("playerWaves", (data, context) => {
     const target = game.getPlayer(data.playerWaves.targetId);
     const targetName = target?.name?.trim() || "(unknown)";
-    const isOwner = targetName === OWNER_NAME;
+    const isOwner = targetName.toLowerCase() === OWNER_NAME.toLowerCase();
 
     const targetLabel = isOwner ? `你(${OWNER_NAME})` : targetName;
     const waver = context.player?.name?.trim() || "(unknown)";
