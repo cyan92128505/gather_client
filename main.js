@@ -30,11 +30,13 @@ function main() {
     const targetLabel = isOwner ? `你(${OWNER_NAME})` : targetName;
     const waver = context.player?.name?.trim() || "(unknown)";
     console.log(`[wave] ${waver} -> ${targetName}`);
-
-    // Loud only when it is aimed at you; everyone else's waves go silent.
-    sendTelegram(`${waver} 在 Gather 對 ${targetLabel} 揮手了`, {
-      silent: !isOwner,
-    });
+    if (isOwner) {
+      // Loud only when it is aimed at you; everyone else's waves go silent.
+      sendTelegram(`${waver} 在 Gather 對 ${targetLabel} 揮手了`, {
+        silent: !isOwner,
+      });
+    }
+      
   });
 }
 
